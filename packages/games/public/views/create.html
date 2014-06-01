@@ -1,0 +1,39 @@
+<section data-ng-controller="GamesController">
+    <form class="form-horizontal col-md-6" role="form" data-ng-submit="create()">
+        <div class="form-group">
+            <label mean-token="'create-homeTeam'" class="col-md-3 control-label">Home Team</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" data-ng-model="homeTeam" id="homeTeam" placeholder="HomeTeam" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label mean-token="'create-visitingTeam'" class="col-md-3 control-label">Visiting Team</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" data-ng-model="visitingTeam" id="visitingTeam" placeholder="VisitingTeam" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label mean-token="'create-venue'" class="col-md-3 control-label">Venue</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" data-ng-model="venue" id="venue" placeholder="Venue" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label mean-token="'create-scheduled-date'" class="col-md-3 control-label">Scheduled Date</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" data-ng-model="scheduledDate" id="scheduledDate" placeholder="YYYY-MM-DD" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label mean-token="'create-scheduled-time'" class="col-md-3 control-label">Scheduled Time</label>
+            <div class="col-md-9">
+                <datepicker ng-model='scheduledDate'></datepicker>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+                <button type="submit" class="btn btn-info">Submit</button>
+            </div>
+        </div>
+    </form>
+</section>

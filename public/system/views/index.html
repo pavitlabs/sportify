@@ -1,3 +1,18 @@
-<section data-ng-controller="IndexController">
-    <h1 mean-token="'home-default'">This is the home view</h1>
+<section class="landingPage" data-ng-controller="IndexController">
+
+
+    <div class="landing-page-quote lpq-wrap lpq-style-1">
+        <div>
+            <blockquote>
+                <p>{{quote}}</p>
+            </blockquote>
+            <div class="lpq-attribution">
+                <p class="lpq-author">{{author}}</p>
+            </div>
+        </div>
+    </div>
+    <div style="z-index: 10; position: absolute; right: 200px; top: 50px;">
+        <img src="{{authorImgUrl}}" alt="" width="300" height="240">
+    </div>
+
 </section>

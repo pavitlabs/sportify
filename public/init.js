@@ -2,7 +2,8 @@
 
 angular.element(document).ready(function() {
     //Fixing facebook bug with redirect
-    if (window.location.hash === '#_=_') window.location.hash = '#!';
+    if (window.location.hash === '#_=_')
+        window.location.hash = '#!';
 
     //Then init the app
     angular.bootstrap(document, ['mean']);
@@ -17,7 +18,12 @@ for (var index in window.modules) {
 }
 
 // Default modules
-var modules = ['ngCookies', 'ngResource', 'ui.bootstrap', 'ui.router', 'mean.system', 'mean.auth'];
+var modules = ['ngCookies', 
+    'ngResource', 
+    'ui.bootstrap', 
+    'ui.router', 
+    'mean.system', 
+    'mean.auth'];
 modules = modules.concat(packageModules);
 
 // Combined modules

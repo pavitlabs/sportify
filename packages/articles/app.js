@@ -6,7 +6,6 @@
 var Module = require('meanio').Module;
 
 var Articles = new Module('Articles');
-
 /*
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
@@ -49,3 +48,5 @@ Articles.register(function(app, auth, database) {
 
     return Articles;
 });
+
+
