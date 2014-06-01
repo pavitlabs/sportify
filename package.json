@@ -1,11 +1,12 @@
 {
   "name" : "sportify",
   "description" : "Sportify",
-  "version" : "1.0",
+  "version" : "1.0.0",
   "private" : false,
   "author" : {
     "name" : "Sai Hegde",
-    "email" : "saihegde@gmail.com"
+    "email" : "saihegde@gmail.com",
+    "url" : "http://www.pavitlabs.com"
   },
   "contributors" : [ {
     "name" : "Lior Kesos",
