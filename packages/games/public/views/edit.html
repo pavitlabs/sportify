@@ -1,21 +1,33 @@
 <section data-ng-controller="GamesController" data-ng-init="findOne()">
     <form class="form-horizontal col-md-6" role="form" data-ng-submit="update()">
         <div class="form-group">
-            <label mean-token="'edit-home-team'" for="homeTeam" class="col-md-2 control-label">Home Team</label>
-            <div class="col-md-10">
+            <label mean-token="'edit-home-team'" for="homeTeam" class="col-md-3 control-label">Home Team</label>
+            <div class="col-md-9">
                 <input type="text" class="form-control" data-ng-model="game.homeTeam" id="title" placeholder="Home Team" required>
             </div>
         </div>
         <div class="form-group">
-            <label mean-token="'edit-visiting-team'" for="visitingTeam" class="col-md-2 control-label">Visiting Team</label>
-            <div class="col-md-10">
+            <label mean-token="'edit-visiting-team'" for="visitingTeam" class="col-md-3 control-label">Visiting Team</label>
+            <div class="col-md-9">
                 <input type="text" class="form-control" data-ng-model="game.visitingTeam" id="visitingTeam" placeholder="Visiting Team" required>
             </div>
         </div>
         <div class="form-group">
-            <label mean-token="'edit-venue'" for="venue" class="col-md-2 control-label">Venue</label>
-            <div class="col-md-10">
+            <label mean-token="'edit-venue'" for="venue" class="col-md-3 control-label">Venue</label>
+            <div class="col-md-9">
                 <input type="text" class="form-control" data-ng-model="game.venue" id="venue" placeholder="Venue" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label mean-token="'edit-scheduled-date'" class="col-md-3 control-label">Scheduled Date</label>
+            <div class="col-md-9 dropdown">
+                <a class="dropdown-toggle" id="scheduledDateDropdown" role="button" data-toggle="dropdown" data-target="#" href="#">
+                    <div class="input-group"><input type="text" class="form-control" data-ng-model="game.scheduledDate"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <datetimepicker data-ng-model="game.scheduledDate" data-datetimepicker-config="{ dropdownSelector: '#scheduledDateDropdown' }"/>
+                </ul>
             </div>
         </div>
         <div class="form-group">
