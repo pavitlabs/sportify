@@ -1,22 +1,19 @@
 <div class="" data-ng-controller="GamesController">
-    <p class="alert alert-info">You can find your package in /packages/games</p>
+    <p class="alert alert-info">Next Game in :: </p>
     <section data-ng-init="find()">
         <h1 data-ng-hide="games.length === 0">My Games</h1>
         <ul class="games unstyled">
             <li data-ng-repeat="game in games">
-                <h2>
-                    <a data-ng-href="#!/games/{{game._id}}">
-                        {{game.homeTeam}} vs {{game.visitingTeam}}
-                    </a>,{{game.venue}}
-                    <span data-ng-if="hasAuthorization(game)">
-                        <a class="btn" href="/#!/games/{{game._id}}/edit">
-                            <i class="glyphicon glyphicon-edit"></i>
-                        </a>
-                        <a class="btn" data-ng-click="remove(game);">
-                            <i class="glyphicon glyphicon-trash"></i>
-                        </a>
-                    </span>
-                </h2>
+                <a data-ng-href="#!/games/{{game._id}}">{{game.scheduledDate| date:'yyyy-MM-dd hh:mm a'}}</a>
+                {{game.homeTeam}} vs {{game.visitingTeam}},{{game.venue}},
+                <span data-ng-if="hasAuthorization(game)">
+                    <a class="btn" href="/#!/games/{{game._id}}/edit">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </a>
+                    <a class="btn" data-ng-click="remove(game);">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </span>
             </li>
         </ul>
         <h1 data-ng-hide="!games || games.length">No games yet. <br> Why don't you <a href="/#!/games/create">Create One</a>?</h1>
@@ -39,5 +36,7 @@
             <a href="games/example/render">Raw Html rendering example from using swig</a>
         </li>
     </ol>
+
+
 
 </div>

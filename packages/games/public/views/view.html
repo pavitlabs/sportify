@@ -1,8 +1,9 @@
 <section data-ng-controller="GamesController" data-ng-init="findOne()">
     <span>{{game.created | date:'medium'}}</span> /
     <span>{{game.user.name}}</span>
-    <h2>{{game.homeTeam}}</h2> vs
-    <h2>{{game.visitingTeam}}</h2>
+    <div>{{game.scheduledDate | date:'yyyy-MM-dd hh:mm a'}}</div>
+    <h2>{{game.homeTeam}} vs {{game.visitingTeam}}</h2>
+    <div>at {{game.venue}}</div>
     <div data-ng-if="hasAuthorization(game)">
         <a class="btn" href="/#!/games/{{game._id}}/edit">
             <i class="glyphicon glyphicon-edit"></i>
@@ -11,5 +12,4 @@
             <i class="glyphicon glyphicon-trash"></i>
         </a>
     </div>
-    <div>{{game.venue}}</div>
 </section>
