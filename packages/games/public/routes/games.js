@@ -25,13 +25,13 @@ angular.module('mean.games').config(['$stateProvider',
         };
 
         $stateProvider
-                .state('games example page', {
+                    .state('games example page', {
                     url: '/games/example',
                     templateUrl: 'games/views/index.html'
                 })
                 .state('all games', {
                     url: '/games',
-                    templateUrl: 'games/views/list.html',
+                    templateUrl: 'games/views/index.html',
                     resolve: {
                         loggedin: checkLoggedin
                     }

@@ -12,7 +12,7 @@ var hasAuthorization = function(req, res, next) {
 
 // The Package is past automatically as first parameter
 module.exports = function(Games, app, auth, database) {
-
+    
     app.route('/games')
         .get(games.all)
         .post(auth.requiresLogin, games.create);

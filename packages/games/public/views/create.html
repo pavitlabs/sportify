@@ -20,16 +20,19 @@
         </div>
         <div class="form-group">
             <label mean-token="'create-scheduled-date'" class="col-md-3 control-label">Scheduled Date</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control" data-ng-model="scheduledDate" id="scheduledDate" placeholder="YYYY-MM-DD" required>
+            <div class="dropdown">
+                <a class="dropdown-toggle" id="scheduledDateDropdown" role="button" data-toggle="dropdown" data-target="#" href="#">
+                    <div class="input-group"><input type="text" class="form-control" data-ng-model="scheduledDate"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <datetimepicker data-ng-model="scheduledDate" data-datetimepicker-config="{ dropdownSelector: '#scheduledDateDropdown' }"/>
+                </ul>
             </div>
         </div>
-        <div class="form-group">
-            <label mean-token="'create-scheduled-time'" class="col-md-3 control-label">Scheduled Time</label>
-            <div class="col-md-9">
-                <datepicker ng-model='scheduledDate'></datepicker>
-            </div>
-        </div>
+
+
+
         <div class="form-group">
             <div class="col-md-offset-3 col-md-9">
                 <button type="submit" class="btn btn-info">Submit</button>
