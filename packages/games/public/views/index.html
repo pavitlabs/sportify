@@ -4,16 +4,25 @@
         <h1 data-ng-hide="games.length === 0">My Games</h1>
         <ul class="games unstyled">
             <li data-ng-repeat="game in games">
-                <a data-ng-href="#!/games/{{game._id}}">{{game.scheduledDate| date:'yyyy-MM-dd hh:mm a'}}</a>
-                {{game.homeTeam}} vs {{game.visitingTeam}},{{game.venue}},
-                <span data-ng-if="hasAuthorization(game)">
-                    <a class="btn" href="/#!/games/{{game._id}}/edit">
-                        <i class="glyphicon glyphicon-edit"></i>
-                    </a>
-                    <a class="btn" data-ng-click="remove(game);">
-                        <i class="glyphicon glyphicon-trash"></i>
-                    </a>
-                </span>
+                <div class="game-day">
+                    {{game.scheduledDate| date:'EEEE, dd MMMM yyyy'}}
+                </div>
+                <div>
+                    <span>{{game.scheduledDate| date:'hh:mm a'}}</span>
+                    <span>{{game.homeTeam}}</span>
+                    <span> vs </span>
+                    <span>{{game.visitingTeam}}</span>
+                    <span class="game-edit-control" data-ng-if="hasAuthorization(game)">
+                        <a class="btn" href="/#!/games/{{game._id}}/edit">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </a>
+                        <a class="btn" data-ng-click="remove(game);">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </a>
+                    </span>
+                </div>
+                <div>{{game.venue}}</div>
+
             </li>
         </ul>
         <h1 data-ng-hide="!games || games.length">No games yet. <br> Why don't you <a href="/#!/games/create">Create One</a>?</h1>
