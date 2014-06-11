@@ -1,5 +1,21 @@
 <div class="" data-ng-controller="GamesController">
+
+    <div style="position: relative; 
+         background:url(/public/games/assets/img/icons/gameday2.jpeg); background-size: 100% 100%; 
+         background-position: center;
+         width: 600px; height: 300px;">
+
+        <div style="position: absolute; bottom: 0em; left: 50%; width: 400px; font-size: 24px; font-weight: bold; text-transform: uppercase; color: #fff;">
+            <p>Next Game in </p>
+        </div>
+
+    </div>
+
+    <!-- <div align="center">
+        <img src="/public/games/assets/img/icons/gameday2.jpeg" alt="Games" width="600" height="300" align="center">
+    </div> -->
     <p class="alert alert-info">Next Game in :: </p>
+
     <section data-ng-init="find()">
         <h1 data-ng-hide="games.length === 0">My Games</h1>
         <ul class="games unstyled">
