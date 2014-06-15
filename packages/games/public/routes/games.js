@@ -25,7 +25,7 @@ angular.module('mean.games').config(['$stateProvider',
         };
 
         $stateProvider
-                    .state('games example page', {
+                .state('games example page', {
                     url: '/games/example',
                     templateUrl: 'games/views/index.html'
                 })
@@ -56,6 +56,10 @@ angular.module('mean.games').config(['$stateProvider',
                     resolve: {
                         loggedin: checkLoggedin
                     }
+                })
+                .state('games by team', {
+                    url: '/teams/:teamTag/games',
+                    templateUrl: 'games/views/index.html'
                 });
 
     }

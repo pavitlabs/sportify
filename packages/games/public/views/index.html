@@ -1,7 +1,8 @@
 <div class="" data-ng-controller="GamesController">
 
     <div style="position: relative; 
-         background:url(/public/games/assets/img/icons/gameday2.jpeg); background-size: 100% 100%; 
+         background:url(/public/games/assets/img/icons/gameday2.jpeg); 
+         background-size: 100% 100%; 
          background-position: center;
          width: 600px; height: 300px;">
 
@@ -11,13 +12,8 @@
 
     </div>
 
-    <!-- <div align="center">
-        <img src="/public/games/assets/img/icons/gameday2.jpeg" alt="Games" width="600" height="300" align="center">
-    </div> -->
-    <p class="alert alert-info">Next Game in :: </p>
-
     <section data-ng-init="find()">
-        <h1 data-ng-hide="games.length === 0">My Games</h1>
+        <h1 data-ng-hide="games.length === 0">Schedule</h1>
         <ul class="games unstyled">
             <li data-ng-repeat="game in games">
                 <div class="game-day">
@@ -37,6 +33,7 @@
                         </a>
                     </span>
                 </div>
+                <div>{{game.venue}}</div>
                 <div>{{game.venue}}</div>
 
             </li>
