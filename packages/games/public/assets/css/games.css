@@ -10,9 +10,22 @@
 .game-edit-control{
     float: right;
 }
-
 .map_canvas {
     width: 500px;
     height: 400px;
     background-color: #CCC;
+}
+.nextGameCountdown{
+    left: 50%; 
+    width: 400px; 
+    font-size: 24px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    color: #fff;
+}
+.nextGameCountdownContainer{
+    background:url(/public/games/assets/img/icons/gameday2.jpeg); 
+    background-size: 100% 100%; 
+    background-position: center;
+    width: 600px; height: 300px;
 }
